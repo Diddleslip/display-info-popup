@@ -1,0 +1,20 @@
+.divClass {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonClass {
+  /* nothing needed to put button at the end */
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  /* outline: 1px solid red;
+  outline-offset: -1px; */
+}
+
+.popUpBar {
+  padding: 1%;
+  /* background: red; */
+}
