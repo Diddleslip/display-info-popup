@@ -38,7 +38,7 @@ function PopUpBar() {
         vertical
         // target={segmentRef}
         visible={visible}
-        // width='large'
+        // width='wide'
       >
         <div className="divClass">
           <button 
