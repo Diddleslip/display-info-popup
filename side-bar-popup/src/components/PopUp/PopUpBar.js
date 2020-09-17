@@ -1,12 +1,6 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react';
 import {
   Checkbox,
-  Grid,
-  Header,
-  Image,
-  Menu,
-  Ref,
-  Segment,
   Sidebar,
 } from 'semantic-ui-react'
 import { PopUpData } from "./PopUpData";
@@ -15,10 +9,9 @@ import "./PopUpBar.css"
 import 'semantic-ui-css/semantic.min.css'
 
 function PopUpBar() {
-  //This is for Sidebar functionality
-  const segmentRef = useRef();
   // This is the state for the Sidebar Component
   const [visible, setVisible] = useState(false);
+  // This is the state for the Dummy Data
   const [data, setData] = useState([]);
 
 
@@ -32,17 +25,11 @@ function PopUpBar() {
           onClick={() => setData([PopUpData.records])}
       />
       <Sidebar
-        // as={Menu}
         animation='overlay'
         direction="bottom"
         className="popUpBar"
-        // icon='labeled'
-        // inverted
         onHide={() => setVisible(false)}
-        vertical
-        // target={segmentRef}
         visible={visible}
-        // width='wide'
       >
         <div className="divClass">
           <button 
