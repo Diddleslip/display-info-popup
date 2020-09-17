@@ -9,6 +9,8 @@ import {
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
+import { PopUpData } from "./PopUpData";
+
 import "./PopUpBar.css"
 import 'semantic-ui-css/semantic.min.css'
 
@@ -17,6 +19,7 @@ function PopUpBar() {
   const segmentRef = useRef();
   // This is the state for the Sidebar Component
   const [visible, setVisible] = useState(false);
+  const [data, setData] = useState([]);
 
 
   return (
@@ -26,6 +29,7 @@ function PopUpBar() {
           checked={visible}
           label={{ children: <code>visible</code> }}
           onChange={(e, data) => setVisible(data.checked)}
+          onClick={() => setData([PopUpData.records])}
       />
       <Sidebar
         // as={Menu}
@@ -43,14 +47,44 @@ function PopUpBar() {
         <div className="divClass">
           <button 
             className="buttonClass"
-            onClick={() => setVisible(!visible)}
+            onClick={() => {
+              setVisible(!visible)
+            }}
           >
-            Close sidebar
+            X
           </button>
         </div>
-        <h1 as='a'>Home</h1>
-        <h1 as='a'>Games</h1>
-        <h1 as='a'>Channels</h1>
+        
+        {PopUpData && data.map(record => (
+          record.map(info => (
+              <div key={info.id}  className="bigDiv">
+                <div className="recordDiv">
+                  <h1 id="recordTitle">{info.name}</h1>
+                  <div className="recordDetails">
+                    <h3>Type: {info.type.name}</h3>
+                    <h3>Coordinates: [ {info.coordinates.longitude}, {info.coordinates.latitude} ]</h3>
+                    {info.fields.map((field) => (
+                      console.log("THIS IS FIELD!", field),
+                      field.name === "Website" ? (
+                        <h3>Website: <a href={field.value} target="_blank" rel="noopener noreferrer" >Link</a></h3>
+                      ) : null
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="galleryDiv">
+                  <div className="galleryTitles">
+                    <li id="liID1" onClick={() => console.log("CLICK")}>Gallery</li>
+                    <li id="liID2">Photos</li>
+                    <li id="liID3">Videos</li>
+                  </div>
+                  <div>
+                    
+                  </div>
+                </div>
+              </div>
+          ))
+        ))}
       </Sidebar>
 
       {/* <Ref innerRef={segmentRef}>
