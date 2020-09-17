@@ -17,7 +17,6 @@ function PopUpBar() {
 
   return (
     <div>
-      <h2>Hello here!</h2>
       <Checkbox
           checked={visible}
           label={{ children: <code>visible</code> }}
