@@ -8,8 +8,6 @@
 
 ### Overall, a productive project which allowed for better understanding of Pop Up Modals.
 
-*  If you're looking at my work make sure to look at the ThirdCarsousel.js file, as that is the final and polished version.
-
 ## Preview of work done:
 ### Image of Pop-up-Bar displaying dynamic info and picures
 ![image](https://user-images.githubusercontent.com/52723004/93537418-6b6c9c00-f919-11ea-80de-e61a76117757.png)
