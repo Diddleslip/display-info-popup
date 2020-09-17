@@ -4,6 +4,7 @@ import {
   Sidebar,
 } from 'semantic-ui-react'
 import { PopUpData } from "./PopUpData";
+import FinalCarousel from "../FinalCarousel/FinalCarousel";
 
 import "./PopUpBar.css"
 import 'semantic-ui-css/semantic.min.css'
@@ -13,6 +14,7 @@ function PopUpBar() {
   const [visible, setVisible] = useState(false);
   // This is the state for the Dummy Data
   const [data, setData] = useState([]);
+  const [popUpActive, setPopUpActive] = useState(1);
 
 
   return (
@@ -32,6 +34,7 @@ function PopUpBar() {
       >
         <div className="divClass">
           <button 
+            id="xButton"
             className="buttonClass"
             onClick={() => {
               setVisible(!visible)
@@ -60,22 +63,24 @@ function PopUpBar() {
                 
                 <div className="galleryDiv">
                   <div className="galleryTitles">
-                    <li id="liID1" onClick={() => console.log("CLICK")}>Gallery</li>
-                    <li id="liID2">Photos</li>
-                    <li id="liID3">Videos</li>
+                    <li className="liID1">Gallery</li>
+                    <li 
+                      value={1} 
+                      className={`liID2 ${popUpActive === 1 ? "popUpActive" : ""}`} 
+                      onClick={(e) => setPopUpActive(e.target.value)}
+                    >Photos</li>
+                    <li 
+                      value={2} 
+                      className={`liID3 ${popUpActive === 2 ? "popUpActive" : ""}`} 
+                      onClick={(e) => setPopUpActive(e.target.value)}
+                    >Videos</li>
                   </div>
-                  <div>
-                    
-                  </div>
+                  <FinalCarousel/>
                 </div>
               </div>
           ))
         ))}
       </Sidebar>
-
-      {/* <Ref innerRef={segmentRef}>
-        <button className="buttonClass">Close sidebar</button>
-      </Ref> */}
     </div>
   )
 }
