@@ -4,7 +4,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import "./FinalCarousel.css";
 
-const items = ["https://i.imgur.com/VTpz8XB.jpg", "https://i.imgur.com/nff0PWy.jpg", "https://i.imgur.com/fY311wc.jpeg", "https://i.imgur.com/BaGeu7F.jpeg", "https://i.imgur.com/rc9nH0R.jpeg", "https://i.imgur.com/xnoLgTy.jpeg"];
+const items = ["https://i.imgur.com/VTpz8XB.jpg", "https://i.imgur.com/nff0PWy.jpg", "https://i.imgur.com/VTpz8XB.jpg", "https://i.imgur.com/nff0PWy.jpg", "https://i.imgur.com/fY311wc.jpeg", "https://i.imgur.com/BaGeu7F.jpeg", "https://i.imgur.com/rc9nH0R.jpeg", "https://i.imgur.com/xnoLgTy.jpeg"];
 
 function FinalCarousel() {
   let Carousel = useRef();
