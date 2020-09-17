@@ -3,6 +3,7 @@
   justify-content: flex-end;
 }
 
+/* Super useful CSS for styling buttons! */
 .buttonClass {
   background-color: Transparent;
   /* background-repeat:no-repeat; */
@@ -14,7 +15,6 @@
 }
 
 #xButton {
-  /* border: 1px solid black; */
   font-size: 150%;
   font-weight: 700;
 }
@@ -53,7 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 35%;
+  width: 40%;
 }
 
 #recordTitle {
@@ -73,17 +73,16 @@
 .galleryTitles {
   display: flex;
   list-style: none;
-  font-size: 200%;
 } 
 
 .liID1 {
-  font-size: 140%;
+  font-size: 240%;
   font-weight: 900;
 }
 
 .liID2 {
   margin-left: 20%;
-  font-size: 90%;
+  font-size: 170%;
   opacity: 70%;
   font-weight: 1;
   cursor: pointer;
@@ -91,7 +90,7 @@
 
 .liID3 {
   margin-left: 100px;
-  font-size: 90%;
+  font-size: 170%;
   opacity: 70%;
   font-weight: 1;
   cursor: pointer;
@@ -105,8 +104,8 @@
 }
 
 .popUpActive {
-  padding-bottom: .7%;
-  font-weight: 1000;
+  padding-bottom: .5%;
+  font-weight: bold;
   opacity: 100%;
   border-bottom: 5px solid lime;
 }
