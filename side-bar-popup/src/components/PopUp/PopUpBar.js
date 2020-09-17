@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import {
   Checkbox,
   Sidebar,
-} from 'semantic-ui-react'
+} from 'semantic-ui-react';
 import { PopUpData } from "./PopUpData";
 import FinalCarousel from "../FinalCarousel/FinalCarousel";
 
-import "./PopUpBar.css"
-import 'semantic-ui-css/semantic.min.css'
+import "./PopUpBar.css";
+import 'semantic-ui-css/semantic.min.css';
 
 function PopUpBar() {
   // This is the state for the Sidebar Component
